@@ -1,0 +1,25 @@
+body {
+    background-color: salmon;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+button {
+    border: none;
+    text-align: center;
+}
+
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 90%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#btn2 {
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.3) inset;
+}
