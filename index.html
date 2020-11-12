@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3 Hard Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="animate__animated animate__fadeInDown">KHAN ROULETTE</h1>
+    </header>
+    <main class="wrapper animate__animated animate__fadeInLeft">
+        <section class="instructionSection">
+            <ul>
+                <li>
+                    <h2>1</h2>
+                    <p>Welcome to Khan Roulette V2.0 . The game rules are simple. 3 doors will appear and to win the game you must open all 3 without opening a red door. If, you hit a red door the game will automatically restart.</p>
+                </li>
+                <li>
+                    <h2>2</h2>
+                    <p>Unlike V1.0 the doors don't have preset configurations. I raised an unruly child this time around. Everytime you press a door it will truly open a random color.</p>
+                </li>
+                <li>
+                    <h2>3</h2>
+                    <p>By default, there is a countdown that will begin during the first round. If, the countdown reaches 0 it will automatically make you lose. Try to beat my score of 8 before time runs out (:</p>
+                </li>
+                <li>
+                    <h2>4</h2>
+                    <p>If, you don't like the pressure just avoid clicking the countdown and it won't start counting down while you play. Press the eliptical click me button when you'd like to begin (:</p>
+                </li>
+            </ul>
+        </section>
+        <section class="clockSection">
+            <button class="clockWrap">
+                <h2 id="clock" class="clock">Click Me</h2>
+            </button>
+        </section>
+        <section class="animate__animated gameSection">
+            <div class="gameWrap">
+                <div class="doorContainer">
+                    <button id="door1" class="door"></button>
+                    <button id="door2" class="door"></button>
+                    <button id="door3" class="door"></button>
+                </div>
+                <div class="buttonContainer">
+                    <button id="btn1" class="button">
+                        <h3>
+                            STREAK: 0
+                        </h3>
+                    </button>
+                    <button id="btn2" class="button">
+                        <h3>
+                            Good Luck!
+                        </h3>
+                    </button>
+                    <button id="btn3" class="button">
+                        <h3>
+                            HIGH SCORE: 0
+                        </h3>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>COPYRIGHT &#169; Created By Asif Khan <a href="https://junocollege.com/">@JunoCollege</a></h4>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
