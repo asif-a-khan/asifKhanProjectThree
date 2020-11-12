@@ -11,6 +11,7 @@ const ak = {
         ak.button1 = $('#btn1')
         ak.button2 = $('#btn2')
         ak.button3 = $('#btn3');
+        ak.centerM = $('#cM');
         ak.clock = $('.clockWrap');
         ak.count = 15;
         ak.gameSpace = $('.gameSection')
@@ -53,7 +54,7 @@ const ak = {
             // Wait 1.5 seconds and run the init method to reset crucial values and change the doors to closed. Display the default message in #btn2.
             setTimeout(function() {
                 ak.init();
-                ak.button2.html(`<h3>Good Luck!</h3>`);
+                ak.centerM.html(`Good Luck!`);
             }, 1500)
         // If, the player loses: Reset counter to 0 whilst displaying counter within #btn1. Keep hCounter the same.
         } else {
@@ -64,7 +65,7 @@ const ak = {
             // Same thing as the previous timeout.
             setTimeout(function() {
                 ak.init();
-                ak.button2.html(`<h3>Good Luck!</h3>`);
+                ak.centerM.html(`Good Luck!`);
             }, 1500)
 
         }
@@ -74,12 +75,12 @@ const ak = {
     tallyDoor(x) {
         ak.doorTally--;
         if (ak.doorTally === 0 && !ak.isRed(x)) {
-            ak.button2.html('<h3>You Win! Restarting</h3>');
+            ak.centerM.html('You Win! Restarting');
             // This runs the win scenario in the gameOver method.
             ak.gameOver('win');
         // If, the door is red at any point, the player has lost.
         } else if (ak.isRed(x)){
-            ak.button2.html('<h3>Game Over! Restarting</h3>');
+            ak.centerM.html('Game Over! Restarting');
             // This runs the lose scenario in the gameOver method.
             ak.gameOver();
         };
@@ -91,7 +92,7 @@ const ak = {
         const cd = setInterval(() => {
             if (x <= 1){
                 setTimeout(function() {
-                    ak.button2.html('<h3>Time is up! Restarting</h3>');
+                    ak.centerM.html('Time is up! Restarting');
                     ak.clock.html(`<h2>Click to start timer</h2>`)
                     ak.gameOver();
                     clearInterval(cd);

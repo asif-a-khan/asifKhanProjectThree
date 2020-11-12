@@ -256,11 +256,6 @@ li {
   margin: 0 auto;
 }
 
-#btn2 {
-  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.3) inset;
-          box-shadow: 10px 10px rgba(0, 0, 0, 0.3) inset;
-}
-
 h1, h2, h3, h4, h5, h6, p, li {
   color: white;
   font-family: 'Cuprum', sans-serif;
@@ -269,6 +264,10 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 h1 {
   font-size: 3rem;
+}
+
+h3 {
+  text-align: center;
 }
 
 a, a:hover, a:visited {
@@ -392,12 +391,17 @@ li p {
   width: 200px;
   height: 100px;
   background-color: teal;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-#btn2 {
-  cursor: pointer;
+  justify-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 10px 10px rgba(0, 0, 0, 0.3);
 }
 
 footer {
