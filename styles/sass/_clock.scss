@@ -1,0 +1,17 @@
+.clockSection {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockWrap {
+    padding: 25px 0;
+    width: 80%;
+    background-color: teal;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: -10px -10px rgba(0,0,0,0.3) inset;
+    cursor: pointer;
+}
