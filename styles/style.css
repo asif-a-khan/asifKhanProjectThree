@@ -441,6 +441,9 @@ footer {
 }
 
 @media only screen and (max-width: 550px) {
+  .door {
+    height: 100px;
+  }
   .door, .button {
     width: 150px;
   }
