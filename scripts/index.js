@@ -58,6 +58,7 @@ const ak = {
         // If, the player loses: Reset counter to 0 whilst displaying counter within #btn1. Keep hCounter the same.
         } else {
             ak.counter = 0;
+            ak.doorTally = 3;
             ak.button1.html(`<h3>Streak: ${ak.counter}</h3>`);
             ak.hCounter = ak.hCounter;
             // Same thing as the previous timeout.
