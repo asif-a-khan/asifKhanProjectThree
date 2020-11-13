@@ -13,8 +13,9 @@ const ak = {
         ak.button3 = $('#btn3');
         ak.centerM = $('#cM');
         ak.clock = $('.clockWrap');
+        ak.clock2 = $('.clockWrap2');
         ak.count = 15;
-        ak.gameSpace = $('.gameSection')
+        ak.gameSpace = $('.gameSection');
         ak.colors = ['red', 'cornFlowerBlue', 'seagreen'];
         ak.playing = true;
         ak.doorTally = 3;
@@ -54,6 +55,7 @@ const ak = {
             // Wait 1.5 seconds and run the init method to reset crucial values and change the doors to closed. Display the default message in #btn2.
             setTimeout(function() {
                 ak.init();
+                ak.door.fadeIn();
                 ak.centerM.html(`Good Luck!`);
             }, 1500)
         // If, the player loses: Reset counter to 0 whilst displaying counter within #btn1. Keep hCounter the same.
@@ -65,6 +67,7 @@ const ak = {
             // Same thing as the previous timeout.
             setTimeout(function() {
                 ak.init();
+                ak.door.fadeIn();
                 ak.centerM.html(`Good Luck!`);
             }, 1500)
 
@@ -106,19 +109,29 @@ const ak = {
 
     // The main game loop.
     startGame() {
-        // Once the click me button is pressed, reveal the doors and start the timer.
+        // Once the timer button is pressed, start the timer.
         ak.clock.click(function() {
-            ak.gameSpace.css('display', 'block');
-            ak.gameSpace.addClass('animate__fadeInDown');
             ak.timer();
         });
+        
+        // If clicked, reveal the game and get out of here.
+        ak.clock2.click(function() {
+            ak.gameSpace.css('display', 'block');
+            ak.gameSpace.addClass('animate__fadeInDown');
+            ak.clock2.unbind('click');
+        });
+
         // Everytime a door is clicked the game randomly selects a color from RGB and assigns the clicked door a random color.
         ak.door.click(function() {
+            const currentSquare = $(this);
             const random = Math.floor(Math.random() * 3);
         // Senpai please notice my use of $(this).
-            $(this).css('background-color', ak.colors[random]);
+            currentSquare.css('background-color', ak.colors[random]);
             // Once the door is assigned a color, check if it's red;
-            ak.tallyDoor($(this));
+            ak.tallyDoor(currentSquare);
+            setTimeout(function() {
+                currentSquare.fadeOut();
+            }, 100);
         });
     }
     

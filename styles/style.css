@@ -290,6 +290,10 @@ footer h4 {
   font-size: 2.5rem;
 }
 
+.clockWrap2 h2 {
+  font-size: 2.5rem;
+}
+
 header {
   text-align: center;
   padding: 75px 0;
@@ -336,9 +340,9 @@ li p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -346,7 +350,18 @@ li p {
 
 .clockWrap {
   padding: 25px 0;
-  width: 80%;
+  width: 45%;
+  background-color: teal;
+  text-align: center;
+  border-radius: 50%;
+  -webkit-box-shadow: -10px -10px rgba(0, 0, 0, 0.3) inset;
+          box-shadow: -10px -10px rgba(0, 0, 0, 0.3) inset;
+  cursor: pointer;
+}
+
+.clockWrap2 {
+  padding: 25px 0;
+  width: 45%;
   background-color: teal;
   text-align: center;
   border-radius: 50%;
