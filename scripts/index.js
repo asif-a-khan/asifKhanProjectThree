@@ -16,7 +16,7 @@ const ak = {
         ak.clock2 = $('.clockWrap2');
         ak.count = 15;
         ak.gameSpace = $('.gameSection');
-        ak.colors = ['red', 'cornFlowerBlue', 'seagreen'];
+        ak.colors = ['red', 'cornFlowerBlue', 'seagreen', 'purple', 'yellow'];
         ak.playing = true;
         ak.doorTally = 3;
         ak.door.css('background-color', 'black');
@@ -123,9 +123,9 @@ const ak = {
 
         // Everytime a door is clicked the game randomly selects a color from RGB and assigns the clicked door a random color.
         ak.door.click(function() {
+            // Caching '$(this)'
             const currentSquare = $(this);
-            const random = Math.floor(Math.random() * 3);
-        // Senpai please notice my use of $(this).
+            const random = Math.floor(Math.random() * 5);
             currentSquare.css('background-color', ak.colors[random]);
             // Once the door is assigned a color, check if it's red;
             ak.tallyDoor(currentSquare);
